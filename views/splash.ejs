@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <title>Snakes & Ladders!</title>
+</head>
+
+    <body>
+        <!-- Hey hey what's up?
+         This game was brought to you by
+         Mieke van Immerseel & Jean-Paul Smit
+         and we made it for our 
+         Computer Science & Engineering 
+         course of webdev in 2018.
+         We put lots of love in it so feel free
+         to share! 🐍🐍🐍 
+        -->
+        <div class="wrapper"></div>
+            <div class="container">
+                    <div class="item snake" id="snakeleft">
+                        <img src="./images/snakeleft.png">
+                    </div>
+                    
+                    <div class = "gamerules left">
+                        <p1> What's up?</p1>
+                        Roll the dice.
+                        <p3>Get on the ladders and avoid the snakes.</p3>
+                        See who reaches the top first!
+                    </div>
+
+                    <div class="item center">
+                                    <form action="/game" method="get">
+                                        <button type="submit" class="start"><img src="./images/start.png"></button>
+                                    </form>
+                            <img src="./images/center.png">
+                    </div>
+        
+                    <div class="item snake" id="snakeright">
+                        <img src="./images/snakeright.png">
+                    </div>
+        
+                    <snakestats class="gamerules">
+                        <p id="cookies"></p>  
+                        Out of
+                            <%= gamesStarted %> 
+                            
+                            <%if (gamesStarted != 1) { %>
+                                games that have
+                            <% } else { %>
+                                game that has
+                            <% } %>
+                            been started, <br/> only
+                            <%= gamesFinished %> 
+                             are won.
+                        </snakestats>
+            </div>
+            <div class="alertthingy"><h1>You better play this game in a higher resolution.</h1></div>
+            <script src="javascripts/splash.js"></script> 
+    </body>
+</html>

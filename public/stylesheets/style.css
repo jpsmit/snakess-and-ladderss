@@ -1,0 +1,411 @@
+/* HTML DOM STYLING */
+html {
+    font-size: 10px;
+    background: url('../images/background.png') bottom center;
+    background-size: cover;
+    caret-color: transparent;
+
+    --A: #3a435e;
+    --B: #55251d;
+    --C: #7d8ca3;
+    --D: #FEF6C9;
+  }
+/* CHECKERBOARD STYLING */
+.sq:nth-child(odd){
+    background-color: var(--A);
+}
+.sq:nth-child(even){
+    background-color: var(--C);
+}
+/* GENERAL STYLING */
+.container {
+    margin: 6% 20% 0 20%;
+    border: 0.18vw solid #000000;
+    background-color: var(--A);
+    z-index: 3;
+
+    height: auto;
+    max-width: 100%;
+
+    display: grid; 
+    grid-template-columns: 1fr 6fr 1fr;
+
+    padding: 1% 2% 1% 2%;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.8);
+}
+
+.main {
+    margin: 2vw 5vw 0 5vw;
+    padding: 0.8vw 1vw 0.8vw 0vw;
+}
+
+.main-grid{
+    display: grid; 
+    grid-template-columns: 5fr 12fr 5fr;
+    padding: 0vw 2vw 0vw 2vw;
+    margin: 0 15vw 0 15vw;
+}
+
+.item {
+    color: antiquewhite;
+    font-family: -apple-system, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue'; 
+    font-size: 2em;
+    text-align: center;
+    align-content: center;
+    background-color: var(--B);
+    z-index: 3;
+}
+
+.center {
+    background-color: var(--C);
+    margin: 0 2% 0 2%;
+    border: 0.1vw solid #000000;
+}
+
+.canvas {
+    display: grid;
+    grid-template-rows:    repeat(7, 4.1vw);
+    grid-template-columns: repeat(7, 4.1vw);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+/* START BUTTON ON THE SPLASH SCREEN */
+.start {
+    right: 43.5vw;
+    width: 10.5vw;
+    margin: 24vw 0 0 0;
+    padding: 0.3vw 2vw 0.1vw 2vw;
+
+    background-color: var(--C);
+    border: 0.2vw solid #000000;
+    box-shadow: 0.2vw 0.3vw #000000;
+    position: absolute;
+    z-index: 20;
+}
+
+.start:hover{
+    background-color: var(--B);
+    box-shadow: 0 0 0;
+    right: 43.3vw;
+    margin: 24.4vw 0 0 0;
+    cursor: pointer;
+}
+/* DICE STYLING */
+#dice{
+    position: absolute;
+    z-index: 40;
+    height: auto;
+    max-width: 9vw;
+    right: 33vw;
+    margin: 32vw 0 0 0;
+}
+#dice:hover{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+#dice:active{
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* PAWNS STYLING */
+#pawn{
+    margin: -2.5vw 0 -1vw -1.1vw;
+    z-index: 20;
+    width: 5vw;
+}
+/* SNAKES AND LADDERS STYLING */
+.Ladder{
+    position: absolute;
+    z-index: 3;
+}
+
+.Snake{
+    position: absolute;
+    z-index: 3;
+}
+
+#s36{
+    right: 39vw;
+    margin: -29vw 0 0 0;
+    height: 22vw;
+    width: 19vw;
+}
+
+#s14{
+    right: 36.5vw;
+    margin: -12.5vw 0 0 0;
+    height: 11.2vw;
+    width: 3vw;
+}
+
+#l10{
+    right: 52.5vw;
+    margin: -28.5vw 0 0 0;
+    height: 10vw;
+    width: 11vw;
+}
+
+#l16{
+    right: 40.5vw;
+    margin: -12vw 0 0 0;
+    height: 10vw;
+    width: 11vw;
+}
+
+#l18{
+    right: 52.5vw;
+    margin: -16.5vw 0 0 0;
+    height: 10vw;
+    width: 11vw;
+}
+
+.gamescreen {
+    background-color: transparent;
+    max-height: 30vw;
+    align-self: end;
+}
+
+#globe{
+    width: 11vw;
+    height: 12vw;
+    position: absolute;
+    margin: -12.4vw 0vw 0vw 75vw;
+    z-index: 40;
+}
+
+#globe :hover{
+    cursor: pointer;
+}
+
+/* SPLASH SCREEN SNAKES */   
+.gamerules{
+    display: none;
+    width: 18vw;
+    padding: 0.7vw 0.3vw 1vw 0.3vw;
+    margin: 10vw 0 0 0;
+    background-color: var(--D);
+    font-size: 0.9vw;
+    text-align: center;
+    color: var(--A);
+    border: 0.2vw solid #000000;
+    box-shadow: 0.2vw 0.3vw #000000;
+    position: absolute;
+    z-index: 20;
+}
+.gamerules left{
+    right: 62vw;
+}
+snakestats{
+    right: 20vw;
+}
+
+p1::before{
+    content: "Hey! ";
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+p3::after{
+    content: "🐍 ";
+}
+
+.snake:hover + snakestats{
+    display: block;
+}
+
+.snake:hover + .gamerules{
+    display: block;
+}
+
+/* FLOOR STYLE */
+.overlay {
+    background-color: var(--A);
+    height: 120vw;
+    width: 120vw;
+    margin: 31vw 0 0 -20vw;
+    position: absolute;
+    z-index: -3;
+}
+.plint {
+    background-color: var(--C); 
+    height: 1vw;
+    width: 120vw;
+    margin: 30vw 0 0 -20vw;
+    border: 0.15vw solid #000000;
+    position: absolute;
+    z-index: -2;
+}
+/* CLOCK */
+.clock {
+    width: 4rem;
+    height: 4rem;
+    right: 21.3vw;
+    top: 11.4vw;
+    position: absolute;
+    padding: 2rem;
+    z-index: 5;
+  }
+
+.clock-face {
+    position: relative;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+
+  .hand {
+    width: 1.8vw;
+    height: 0.1vw;
+    background: #000000;
+    position: absolute;
+    top: 1.2vw;
+    right: 0.9vw;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+/* CLOCK SWING */
+.clockswing{
+    display: block;
+    width: 2vw;
+    height: 8vw;
+    margin: -16.6vw 0vw 0vw 74.7vw;
+    position: absolute;
+    animation: 3s cubic-bezier(.46,.03,.52,.96) 0s normal none infinite swing;
+    -moz-animation: 3s cubic-bezier(.46,.03,.52,.96) 0.3s normal none infinite swing;
+    transform-origin: center top;
+    -moz-transform-origin: center top;
+    z-index: 20;
+}
+.clockswing-smaller{
+    display: block;
+    width: 2vw;
+    height: 6vw;
+    margin: -16.6vw 0vw 0vw 74.3vw;
+    position: absolute;
+    animation: 3s cubic-bezier(.46,.03,.52,.96) 0s normal none infinite swing;
+    -moz-animation: 3s cubic-bezier(.46,.03,.52,.96) 0s normal none infinite swing;
+    transform-origin: center top;
+    -moz-transform-origin: center top;
+    z-index: 19;
+}
+/* ANIMATIONS */
+@keyframes swing{
+    0% {
+        transform: rotate(6deg);
+      }
+      50% {
+        transform: rotate(-6deg);
+      }
+     100%{
+        transform: rotate(6deg);
+      }
+}
+
+@-moz-keyframes swing {
+ 0% {
+   -moz-transform: rotate(6deg);
+ }
+ 50% {
+   -moz-transform: rotate(-6deg);
+ }
+100%{
+   -moz-transform: rotate(6deg);
+ }
+}
+
+/* CLIENT CONSOLE */
+  #console {
+    background-color: var(--C);
+    height: 4vw;
+    width: 24vw;
+    font-size: 1vw;
+    font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+    align-content: center;
+    padding: 0.5vw 0vw 0vw 2vw;
+    color: var(--D);
+    font-style: italic;
+    margin: 2vw 0 0 34.6vw;
+    position: absolute;
+    z-index: -3;
+    border: 0.1vw solid #000000;
+  }
+/* FULLSCREEN MODE */
+  #fullscreen {
+    position: absolute;
+    z-index: 2;
+    height: 10vw;
+    width: 10vw;
+    margin: -29vw 0 0 9vw;
+    cursor: pointer;
+  }
+  /* NO SCROLLBAR  */
+body {
+    overflow:hidden;
+}
+/* LANGUAGE SUPPORT */
+#languages{
+    display: none;
+    width: 26vw;
+    height: 10vw;
+    padding: 0.2vw 0vw 0.2vw 0vw;
+    margin: -20vw 0 0 36vw;
+    background-color: var(--C);
+    font-size: 0.9vw;
+    text-align: center;
+    color: var(--D);
+    border: 0.2vw solid #000000;
+    box-shadow: 0.2vw 0.3vw #000000;
+    position: absolute;
+    z-index: 90;
+}
+
+button{
+    font-size: 1vw;
+    color: var(--A);
+    background-color: var(--D);
+    border: 0.2vw solid #000000;
+    cursor: pointer;
+}
+
+#closedialog {
+    right: 0.3vw;
+    padding: 0vw 0.4vw 0vw 0.4vw;
+    position: absolute;
+}
+
+.alertthingy {
+    display: none;
+    position: absolute;
+    margin: -21vw 0vw 0vw 18vw;
+    text-align: center;
+    width: 62vw;
+    height: 7vw;
+    color: var(--D);
+    font-size: 1.2vw;
+    background-color: var(--C);
+    border: 0.2vw solid #000000;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+@media only screen and (max-width: 1024px) {
+    .alertthingy {
+        display: block;
+    }
+    .wrapper{
+        filter: blur(19vw);
+        background-color: var(--A);
+        width: 105vw;
+        height: 100%;
+        position: absolute;
+        z-index: 90;
+        margin: -6vw 0vw 0vw -5vw;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<html>
+    <head>
+        <title>Snakes & Ladders!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./stylesheets/style.css">
+    </head>
+    <body>
+        <!-- Hey hey what's up?
+         This game was brought to you by
+         Mieke van Immerseel & Jean-Paul Smit
+         and we made it for our 
+         Computer Science & Engineering 
+         course of webdev in 2018.
+         We put lots of love in it so feel free
+         to share! 🐍🐍🐍 
+        -->
+        <main>    
+                <div class="main-grid">
+                    <div id="dice" class="dices"><img src="./images/1.png"></div>
+                    <div class="item gamescreen">
+                        <img id="drawer" src="./images/drawer.png">
+                    </div>
+              
+                    <div class="container main">
+                                            <div class="item center canvas">
+                                              <div class="sq" id="43"></div>
+                                              <div class="sq" id="44"></div>
+                                              <div class="sq" id="45"></div>
+                                              <div class="sq" id="46"></div>
+                                              <div class="sq" id="47"></div>
+                                              <div class="sq" id="48"></div>
+                                              <div class="sq" id="49"></div>
+                                              <!-- sixth row -->
+                                              <div class="sq" id="36"></div>
+                                              <div class="sq" id="37"></div>
+                                              <div class="sq" id="38"></div>
+                                              <div class="sq" id="39"></div>
+                                              <div class="sq" id="40"></div>
+                                              <div class="sq" id="41"></div>
+                                              <div class="sq" id="42"></div>
+                                              <!-- fifth row -->
+                                              <div class="sq" id="35"></div>
+                                              <div class="sq" id="34"></div>
+                                              <div class="sq" id="33"></div>
+                                              <div class="sq" id="32"></div>
+                                              <div class="sq" id="31"></div>
+                                              <div class="sq" id="30"></div>
+                                              <div class="sq" id="29"></div>
+                                              <!-- fourth row -->
+                                              <div class="sq" id="28"></div>
+                                              <div class="sq" id="27"></div>
+                                              <div class="sq" id="26"></div>
+                                              <div class="sq" id="25"></div>
+                                              <div class="sq" id="24"></div>
+                                              <div class="sq" id="23"></div>
+                                              <div class="sq" id="22"></div>
+                                              <!-- third row            -->
+                                              <div class="sq" id="15"></div>
+                                              <div class="sq" id="16"></div>
+                                              <div class="sq" id="17"></div>
+                                              <div class="sq" id="18"></div>
+                                              <div class="sq" id="19"></div>
+                                              <div class="sq" id="20"></div>
+                                              <div class="sq" id="21"></div>
+                                                <!-- second row -->
+                                              <div class="sq" id="14"></div>
+                                              <div class="sq" id="13"></div>
+                                              <div class="sq" id="12"></div>
+                                              <div class="sq" id="11"></div>
+                                              <div class="sq" id="10"></div>
+                                              <div class="sq" id="9"></div>
+                                              <div class="sq" id="8"></div>
+                                              <!-- first row -->
+                                              <div class="sq" id="1"></div>
+                                              <div class="sq" id="2"></div>
+                                              <div class="sq" id="3"></div>
+                                              <div class="sq" id="4"></div>
+                                              <div class="sq" id="5"></div>
+                                              <div class="sq" id="6"></div>
+                                              <div class="sq" id="7"></div>
+                                              
+                                            </div>
+                                     </div>
+                      
+                                      <div class="item gamescreen">
+                                          <img src="./images/grandpaclock.png">
+                                      </div>
+                                      
+                                      <div class="clock">
+                                        <div class="clock-face">
+                                          <div class="hand hour-hand"></div>
+                                          <div class="hand min-hand"></div>
+                                          <div class="hand second-hand"></div>
+                                        </div>
+                                      </div>
+              
+                                      <div class="overlay plint"></div>
+                                      <div class="overlay floor"></div>
+                  </div>
+            <div class="clockswing-smaller"><img src="./images/grandpaclock_swing_B.png"></div>
+            <div class="clockswing"><img src="./images/grandpaclock_swing_A.png"></div>
+            <img id="fullscreen">
+            <div id="globe" onclick="showLanguages()"><img src="./images/globe.png"></div>
+            <div id="languages"></div>
+
+            <div id="console"><span id="clientconsole"></span></div>
+        </main>
+
+        <script src="javascripts/client.js"></script> 
+        <script src="javascripts/messages.js"></script>
+        <!-- browser parses the code from top to bottom, so now we good to go! -->
+    </body>
+</html>
